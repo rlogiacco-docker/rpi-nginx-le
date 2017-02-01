@@ -2,7 +2,7 @@ FROM rlogiacco/rpi-nginx
 
 LABEL maintainer "rlogiacco@gmail.com"
 
-ENV LE_ROOT /etc/ssl/letsencrypt
+ENV HTTP_ROOT /var/www/localhost/html
 
 RUN \
   apk add --no-cache certbot openssl &&\
