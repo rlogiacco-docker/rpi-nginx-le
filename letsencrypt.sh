@@ -1,6 +1,6 @@
 #!/bin/sh
 
-COMMAND="certbot certonly --text --non-interactive --agree-tos --renew-by-default --webroot -w /var/www/localhost/html"
+COMMAND="certbot certonly --text --non-interactive --agree-tos --renew-by-default --webroot -w ${HTTP_ROOT}"
 
 if [ ! -z "${LE_TEST}" ]; then
   COMMAND="${COMMAND} --staging"
