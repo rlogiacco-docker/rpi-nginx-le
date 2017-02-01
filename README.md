@@ -31,10 +31,13 @@ Remember to map the ports to the docker host on run.
 To get the container up and running, run:
  
 ```
-sudo docker run -d -p 8080:80 -p 8443:8443 -v /home/user/le-ssl:/etc/nginx/ssl -v /home/user/html:/var/lib/nginx/html -v /home/user/server.conf:/etc/nginx/conf.d/server.conf --env LE_EMAIL=email@example.com --env LE_FQDN=www.example.com rlogiacco/rpi-nginx-le
+sudo docker run -d -p 8080:80 -p 8443:8443 -v /home/user/le-ssl:/etc/nginx/ssl -v /home/user/html:/srv/html -v /home/user/server.conf:/etc/nginx/conf.d/server.conf --env LE_EMAIL=email@example.com --env LE_FQDN=www.example.com rlogiacco/rpi-nginx-le
 ```
 
-Remember to change `/home/user/le-ssl` to the directory where you want to store the SSL key, certificate and dhparams.
+Remember to change:
+ - `/home/user/le-ssl` to the directory where you want to store the SSL key, certificate and dhparams
+ - `/home/user/html` to the directory hosting your web resources
+ - `/home/user/server.conf` to the nginx configuration file you intend to use
 
 ### Environment Parameters
 
