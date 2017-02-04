@@ -1,7 +1,7 @@
 rpi-nginx-le
 ==============
 
-[![dockeri.co](http://dockeri.co/image/rlogiacco/rpi-nginx-le)](https://registry.hub.docker.com/u/rlogiacco/rpi-nginx-le/)
+[![](https://images.microbadger.com/badges/image/rlogiacco/rpi-nginx-le.svg)](https://microbadger.com/images/rlogiacco/rpi-nginx-le) [![](https://images.microbadger.com/badges/version/rlogiacco/rpi-nginx-le.svg)](https://microbadger.com/images/rlogiacco/rpi-nginx-le)
 
 Based on Alpine for ARM this image delivers a Nginx container with Letsencrypt certificate.
 

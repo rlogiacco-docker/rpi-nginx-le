@@ -11,21 +11,13 @@ if [ -z "${LE_FQDN}" -a -z "${LE_FQDNS}" ]; then
   exit 1
 fi
 
-#setup ssl keys
-#SSL_KEY=/etc/nginx/ssl/le-key.pem
-#SSL_CERT=/etc/nginx/ssl/le-crt.pem
-#mkdir -p /etc/nginx/conf.d
-#cp -f /etc/nginx/service.conf /etc/nginx/conf.d/service.conf
-#sed -i "s|SSL_KEY|${SSL_KEY}|g" /etc/nginx/conf.d/service.conf
-#sed -i "s|SSL_CERT|${SSL_CERT}|g" /etc/nginx/conf.d/service.conf
-
-#generate strong dhparams
+# generate strong dhparams
 if [ ! -f /etc/nginx/ssl/dhparams.pem ]; then
     openssl dhparam -out /etc/nginx/ssl/dhparams.pem 2048
     chmod 600 /etc/nginx/ssl/dhparams.pem
 fi
 
-#disable ssl configuration and let it run without SSL
+# disable ssl configuration and let it run without SSL
 mv -v /etc/nginx/conf.d /etc/nginx/conf.d.bak
 
 (
