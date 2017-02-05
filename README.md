@@ -3,7 +3,11 @@ rpi-nginx-le
 
 [![](https://images.microbadger.com/badges/image/rlogiacco/rpi-nginx-le.svg)](https://microbadger.com/images/rlogiacco/rpi-nginx-le) [![](https://images.microbadger.com/badges/version/rlogiacco/rpi-nginx-le.svg)](https://microbadger.com/images/rlogiacco/rpi-nginx-le)
 
-Based on Alpine for ARM this image delivers a Nginx container with Letsencrypt certificate.
+Based on Alpine for ARM this image delivers a [Nginx](https://nginx.org/en/) container with [Letsencrypt](https://letsencrypt.org/) certificate generation and periodic renewal.
+
+[![](https://nginx.org/nginx.png)](https://nginx.org/en/)
+[![](https://letsencrypt.org/images/letsencrypt-logo-horizontal.svg)](https://letsencrypt.org/)
+
 
 # Description
 You should run this container on the background and mount the volume with your web content inside.
@@ -13,11 +17,11 @@ Includes:
  - Nginx
  - Certbot
  
-## Volumes
+# Volumes
 Exports a volume on `/etc/nginx/ssl` where certificates and dhparams are stored.
 You should mount the volume so to store the generated certificate and DH key.
 
-## Ports
+# Ports
 Two ports are exposed:
 
  - 80: default HTTP port
@@ -26,8 +30,7 @@ Two ports are exposed:
 Remember to map the ports to the docker host on run.
 
 
-# How to run the container
-## Using docker
+# Run the container using docker
 To get the container up and running, run:
  
 ```
